@@ -7,3 +7,17 @@ if dia == "sabado" or dia == "domingo":
 else:
     print('Voce precisa trabalhar!')
 
+# Exercício 2 - Crie uma lista de 5 frutas e verifique se a fruta 'Morango' faz parte da lista
+
+cont3 = 0
+lista1 = ['Abacaxi', 'Laranja', 'Pera', 'maçã', 'goiaba']
+lista2 = ['Abacaxi', 'Laranja', 'Pera', 'maçã', 'morango']
+for i in lista2:
+    if i.lower() == "morango":
+        cont3 += 1
+if cont3 == 0:
+    print('Não tem morango!')
+else:
+    print('Existe morango na lista')
+# Exercício 3 - Crie uma tupla de 4 elementos, multiplique cada elemento da tupla por 2 e guarde os resultados em uma lista
+tupla = ()
