@@ -31,13 +31,14 @@ linha()
 
 
 while True:
+# interação do usuario
     opt = str(input("Digite qual conta quer selecionar [1/2/3/4]: "))
     opt = leiaInt(opt)
     linha()
     n1 = int(input('Digite um valor: '))
     linha()
     n2 = int(input('Digite o segundo valor: '))
-
+# Programa
     if opt == 1:
         operacao = lambda x, y: n1 + n2
         print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
@@ -64,6 +65,6 @@ while True:
     cont = str(input("Deseja fazer mais alguma conta?[S/N]: ")).upper()
     linha()
     if cont == "N":
-        print(f"{'Encerrando Calculadora':.^20}")
+        print(f"{'Encerrando calculadora':.^20}")
         linha()
         break
