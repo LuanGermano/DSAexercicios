@@ -65,6 +65,6 @@ while True:
     cont = str(input("Deseja fazer mais alguma conta?[S/N]: ")).upper()
     linha()
     if cont == "N":
-        print(f"{'Encerrando calculadora':.^20}")
+        print(f"{'Encerrando calculadora':^51}")
         linha()
         break
