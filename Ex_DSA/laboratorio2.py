@@ -34,37 +34,38 @@ while True:
 # interação do usuario
     opt = str(input("Digite qual conta quer selecionar [1/2/3/4]: "))
     opt = leiaInt(opt)
-    linha()
-    n1 = int(input('Digite um valor: '))
-    linha()
-    n2 = int(input('Digite o segundo valor: '))
-# Programa
-    if opt == 1:
-        operacao = lambda x, y: n1 + n2
-        print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
-        print(operacao(n1, n2))
-    elif opt == 2:
-        operacao = lambda x, y: n1 - n2
-        print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
-        print(operacao(n1, n2))
-    elif opt == 3:
-        operacao = lambda x, y: n1 * n2
-        print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
-        print(operacao(n1, n2))
-    elif opt == 4:
-        operacao = lambda x, y: n1 / n2
-        print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
-        print(operacao(n1, n2))
-    else:
+    if opt > 4:
         linha()
         print('\033[0;31mConta Selecionada invalida, por favor escolha entre uma das opções\033[m')
         linha()
-        continue
+    else:
 
-    linha()
-    cont = str(input("Deseja fazer mais alguma conta?[S/N]: ")).upper()
-    linha()
-    if cont == "N":
-        print(f"{'Encerrando calculadora':^51}")
         linha()
-        break
+        n1 = int(input('Digite um valor: '))
+        linha()
+        n2 = int(input('Digite o segundo valor: '))
+    # Programa
+        if opt == 1:
+            operacao = lambda x, y: n1 + n2
+            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
+            print(operacao(n1, n2))
+        elif opt == 2:
+            operacao = lambda x, y: n1 - n2
+            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
+            print(operacao(n1, n2))
+        elif opt == 3:
+            operacao = lambda x, y: n1 / n2
+            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
+            print(operacao(n1, n2))
+        elif opt == 4:
+            operacao = lambda x, y: n1 * n2
+            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
+            print(operacao(n1, n2))
+
+        linha()
+        cont = str(input("Deseja fazer mais alguma conta?[S/N]: ")).upper()
+        linha()
+        if cont == "N":
+            print(f"{'Encerrando calculadora':^51}")
+            linha()
+            break
