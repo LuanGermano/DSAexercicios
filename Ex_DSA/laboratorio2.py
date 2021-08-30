@@ -41,25 +41,29 @@ while True:
     else:
 
         linha()
-        n1 = int(input('Digite um valor: '))
+        n1 = float(input('Digite um valor: '))
         linha()
-        n2 = int(input('Digite o segundo valor: '))
+        n2 = float(input('Digite o segundo valor: '))
     # Programa
         if opt == 1:
             operacao = lambda x, y: n1 + n2
-            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
+            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ')
+            print(f'{n1} + {n2} = ', end='')
             print(operacao(n1, n2))
         elif opt == 2:
             operacao = lambda x, y: n1 - n2
-            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
+            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ')
+            print(f'{n1} - {n2} = ', end='')
             print(operacao(n1, n2))
         elif opt == 3:
             operacao = lambda x, y: n1 / n2
-            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
+            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ')
+            print(f'{n1} / {n2} = ', end='')
             print(operacao(n1, n2))
         elif opt == 4:
             operacao = lambda x, y: n1 * n2
-            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ', end='')
+            print(f'O resultado da sua operação de {operacoes[opt-1]} desejada é: ')
+            print(f'{n1} * {n2} = ', end='')
             print(operacao(n1, n2))
 
         linha()
